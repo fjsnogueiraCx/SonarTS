@@ -7,7 +7,7 @@ module.exports = {
   mapCoverage: true,
   moduleFileExtensions: ["js", "ts"],
   transform: {
-    "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+    "^.+\\.ts$": "../../node_modules/ts-jest/preprocessor.js",
   },
-  testMatch: ["<rootDir>/tests/**/*.test.ts"],
+  testMatch: ["**/tests/**/*.test.ts"],
 };

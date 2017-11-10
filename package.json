@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "sonarts",
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "lerna": "^2.5.1"
+  }
+}

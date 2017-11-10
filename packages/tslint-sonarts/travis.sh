@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-cd sonarts-core
+cd packages/tslint-sonarts
 yarn build
 yarn test -- --coverage
 yarn license-check
 npm pack
-cd ..
+cd ../..

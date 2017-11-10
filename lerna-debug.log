@@ -1,0 +1,244 @@
+0 silly input [ 'test' ]
+1 silly flags { _: [ 'run' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   script: 'test',
+1 silly flags   args: [] }
+2 verbose rootPath /Users/stas/projects/SonarTS
+3 info version 2.5.1
+4 silly existsSync /Users/stas/projects/SonarTS/VERSION
+5 silly initialize attempt
+6 silly initialize success
+7 silly execute attempt
+8 silly runScriptInDir test [] tslint-sonarts
+9 silly getExecOpts { cwd: '/Users/stas/projects/SonarTS/packages/tslint-sonarts' }
+10 error test Errored while running script in 'tslint-sonarts'
+11 error execute callback with error
+12 error Error: Command failed: npm run test
+12 error FAIL tests/rules/rulesReadme.test.ts
+12 error   ● should contain all rules listed in extension
+12 error
+12 error     ENOENT: no such file or directory, open '/Users/stas/projects/README.md'
+12 error
+12 error       at Object.fs.openSync (fs.js:652:18)
+12 error       at Object.fs.readFileSync (fs.js:553:33)
+12 error       at Object.<anonymous>.it (tests/rules/rulesReadme.test.ts:28:21)
+12 error           at Promise (<anonymous>)
+12 error           at <anonymous>
+12 error       at process._tickCallback (internal/process/next_tick.js:188:7)
+12 error
+12 error FAIL tests/runner/tsrunner.test.ts
+12 error   ● Console
+12 error
+12 error     console.error src/runner/rules.ts:42
+12 error       Rule error during analysis of : /Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts TypeError: Cannot read property 'indexOf' of undefined
+12 error           at Rule.Object.<anonymous>.Rule.apply (/Users/stas/projects/SonarTS/node_modules/tslint/lib/rules/noEmptyRule.js:31:48)
+12 error           at executeRule (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/rules.ts:38:25)
+12 error           at rules.forEach.rule (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/rules.ts:28:51)
+12 error           at Array.forEach (native)
+12 error           at Object.getIssues (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/rules.ts:28:11)
+12 error           at input.filepaths.map (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/processRequest.ts:36:41)
+12 error           at Array.map (native)
+12 error           at Object.processRequest (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/processRequest.ts:31:34)
+12 error           at Object.<anonymous>.it (/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/tsrunner.test.ts:27:37)
+12 error           at Object.asyncFn (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/jasmine_async.js:124:345)
+12 error           at resolve (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/queue_runner.js:46:12)
+12 error           at Promise (<anonymous>)
+12 error           at mapper (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/queue_runner.js:34:499)
+12 error           at promise.then (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/queue_runner.js:74:39)
+12 error           at <anonymous>
+12 error           at process._tickCallback (internal/process/next_tick.js:188:7)
+12 error     console.error src/runner/rules.ts:42
+12 error       Rule error during analysis of : /Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/withBOM.lint.ts TypeError: Cannot read property 'indexOf' of undefined
+12 error           at Rule.Object.<anonymous>.Rule.apply (/Users/stas/projects/SonarTS/node_modules/tslint/lib/rules/noEmptyRule.js:31:48)
+12 error           at executeRule (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/rules.ts:38:25)
+12 error           at rules.forEach.rule (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/rules.ts:28:51)
+12 error           at Array.forEach (native)
+12 error           at Object.getIssues (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/rules.ts:28:11)
+12 error           at input.filepaths.map (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/processRequest.ts:36:41)
+12 error           at Array.map (native)
+12 error           at Object.processRequest (/Users/stas/projects/SonarTS/packages/tslint-sonarts/src/runner/processRequest.ts:31:34)
+12 error           at Object.<anonymous>.it (/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/tsrunner.test.ts:65:37)
+12 error           at Object.asyncFn (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/jasmine_async.js:124:345)
+12 error           at resolve (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/queue_runner.js:46:12)
+12 error           at Promise (<anonymous>)
+12 error           at mapper (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/queue_runner.js:34:499)
+12 error           at promise.then (/Users/stas/projects/SonarTS/node_modules/jest-jasmine2/build/queue_runner.js:74:39)
+12 error           at <anonymous>
+12 error           at process._tickCallback (internal/process/next_tick.js:188:7)
+12 error
+12 error   ● should process full input
+12 error
+12 error     expect(received).toEqual(expected)
+12 error
+12 error     Expected value to equal:
+12 error       [{"classes": 0, "commentLines": [], "cpdTokens": [{"endCol": 8, "endLine": 1, "image": "function", "startCol": 0, "startLine": 1}, {"endCol": 10, "endLine": 1, "image": "x", "startCol": 9, "startLine": 1}, {"endCol": 11, "endLine": 1, "image": "(", "startCol": 10, "startLine": 1}, {"endCol": 12, "endLine": 1, "image": ")", "startCol": 11, "startLine": 1}, {"endCol": 13, "endLine": 1, "image": "{", "startCol": 12, "startLine": 1}, {"endCol": 14, "endLine": 1, "image": "}", "startCol": 13, "startLine": 1}], "executableLines": [], "filepath": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts", "functions": 1, "highlights": [{"endCol": 8, "endLine": 1, "startCol": 0, "startLine": 1, "textType": "keyword"}], "issues": [{"endPosition": {"character": 14, "line": 0, "position": 14}, "failure": "block is empty", "fix": undefined, "name": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts", "ruleName": "no-empty", "ruleSeverity": "ERROR", "startPosition": {"character": 12, "line": 0, "position": 12}}], "ncloc": [1], "nosonarLines": [], "statements": 0}]
+12 error     Received:
+12 error       [{"classes": 0, "commentLines": [], "cpdTokens": [{"endCol": 8, "endLine": 1, "image": "function", "startCol": 0, "startLine": 1}, {"endCol": 10, "endLine": 1, "image": "x", "startCol": 9, "startLine": 1}, {"endCol": 11, "endLine": 1, "image": "(", "startCol": 10, "startLine": 1}, {"endCol": 12, "endLine": 1, "image": ")", "startCol": 11, "startLine": 1}, {"endCol": 13, "endLine": 1, "image": "{", "startCol": 12, "startLine": 1}, {"endCol": 14, "endLine": 1, "image": "}", "startCol": 13, "startLine": 1}], "executableLines": [], "filepath": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts", "functions": 1, "highlights": [{"endCol": 8, "endLine": 1, "startCol": 0, "startLine": 1, "textType": "keyword"}], "issues": [], "ncloc": [1], "nosonarLines": [], "statements": 0}]
+12 error
+12 error     Difference:
+12 error
+12 error     - Expected
+12 error     + Received
+12 error
+12 error     @@ -56,29 +56,11 @@
+12 error               "startCol": 0,
+12 error               "startLine": 1,
+12 error               "textType": "keyword",
+12 error             },
+12 error           ],
+12 error     -     "issues": Array [
+12 error     -       Object {
+12 error     -         "endPosition": Object {
+12 error     -           "character": 14,
+12 error     -           "line": 0,
+12 error     -           "position": 14,
+12 error     -         },
+12 error     -         "failure": "block is empty",
+12 error     -         "fix": undefined,
+12 error     -         "name": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts",
+12 error     -         "ruleName": "no-empty",
+12 error     -         "ruleSeverity": "ERROR",
+12 error     -         "startPosition": Object {
+12 error     -           "character": 12,
+12 error     -           "line": 0,
+12 error     -           "position": 12,
+12 error     -         },
+12 error     -       },
+12 error     -     ],
+12 error     +     "issues": Array [],
+12 error           "ncloc": Array [
+12 error             1,
+12 error           ],
+12 error           "nosonarLines": Array [],
+12 error           "statements": 0,
+12 error
+12 error       at Object.<anonymous>.it (tests/runner/tsrunner.test.ts:29:18)
+12 error           at Promise (<anonymous>)
+12 error           at <anonymous>
+12 error       at process._tickCallback (internal/process/next_tick.js:188:7)
+12 error
+12 error PASS tests/symbols/symbols.test.ts
+12 error PASS tests/rules/noCollectionSizeMischeckRule/noCollectionSizeMischeckRule.test.ts
+12 error PASS tests/rules/noAccessorFieldMismatchRule/noAccessorFieldMismatchRule.test.ts
+12 error PASS tests/rules/noIgnoredReturnRule/noIgnoredReturnRule.test.ts
+12 error PASS tests/rules/noArrayDeleteRule/noArrayDeleteRule.test.ts
+12 error PASS tests/rules/noUseOfEmptyReturnValueRule/noUseOfEmptyReturnValueRule.test.ts
+12 error PASS tests/rules/noUnusedArrayRule/noUnusedArrayRule.test.ts
+12 error PASS tests/symbols/lva.test.ts (8.632s)
+12 error PASS tests/rules/noMisleadingArrayReverseRule/noMisleadingArrayReverseRule.test.ts
+12 error PASS tests/rules/noDeadStoreRule/noDeadStoreRule.test.ts
+12 error PASS tests/rules/noVariableUsageBeforeDeclarationRule/noVariableUsageBeforeDeclarationRule.test.ts
+12 error PASS tests/cfg/cfg.test.ts
+12 error PASS tests/tools/cfg_viewer/transformer.test.ts
+12 error PASS tests/rules/noSameLineConditionalRule/noSameLineConditionalRule.test.ts
+12 error PASS tests/rules/noSelfAssignmentRule/noSelfAssignmentRule.test.ts
+12 error PASS tests/rules/noDuplicatedBranchesRule/noDuplicatedBranchesRule.test.ts
+12 error PASS tests/runner/rules.test.ts
+12 error PASS tests/rules/noUnconditionalJumpRule/noUnconditionalJumpRule.test.ts
+12 error PASS tests/rules/noInconsistentReturnRule/noInconsistentReturnRule.test.ts
+12 error PASS tests/rules/noAllDuplicatedBranchesRule/noAllDuplicatedBranchesRule.test.ts
+12 error PASS tests/runner/highlighter.test.ts
+12 error PASS tests/runner/cpd.test.ts
+12 error PASS tests/rules/noIdenticalFunctionsRule/noIdenticalFunctionsRule.test.ts
+12 error PASS tests/rules/noIdenticalExpressionsRule/noIdenticalExpressionsRule.test.ts
+12 error PASS tests/rules/noMisspelledOperatorRule/noMisspelledOperatorRule.test.ts
+12 error PASS tests/rules/noUnenclosedMultilineBlockRule/noUnenclosedMultilineBlockRule.test.ts
+12 error PASS tests/rules/noEmptyNestedBlocksRule/noEmptyNestedBlocksRule.test.ts
+12 error PASS tests/runner/metrics.test.ts
+12 error PASS tests/rules/noMultilineStringLiteralsRule/noMultilineStringLiteralsRule.test.ts
+12 error PASS tests/rules/noIdenticalConditionsRule/noIdenticalConditionsRule.test.ts
+12 error PASS tests/rules/noUnthrownErrorRule/noUnthrownErrorRule.test.ts
+12 error PASS tests/rules/noEmptyDestructuringRule/noEmptyDestructuringRule.test.ts
+12 error PASS tests/rules/rulesProfile.test.ts
+12 error PASS tests/cfg/cfg_block.test.ts
+12 error PASS tests/rules/noUselessIncrementRule/noUselessIncrementRule.test.ts
+12 error
+12 error Summary of all failing tests
+12 error FAIL tests/rules/rulesReadme.test.ts
+12 error   ● should contain all rules listed in extension
+12 error
+12 error     ENOENT: no such file or directory, open '/Users/stas/projects/README.md'
+12 error
+12 error       at Object.fs.openSync (fs.js:652:18)
+12 error       at Object.fs.readFileSync (fs.js:553:33)
+12 error       at Object.<anonymous>.it (tests/rules/rulesReadme.test.ts:28:21)
+12 error           at Promise (<anonymous>)
+12 error           at <anonymous>
+12 error       at process._tickCallback (internal/process/next_tick.js:188:7)
+12 error
+12 error FAIL tests/runner/tsrunner.test.ts
+12 error   ● should process full input
+12 error
+12 error     expect(received).toEqual(expected)
+12 error
+12 error     Expected value to equal:
+12 error       [{"classes": 0, "commentLines": [], "cpdTokens": [{"endCol": 8, "endLine": 1, "image": "function", "startCol": 0, "startLine": 1}, {"endCol": 10, "endLine": 1, "image": "x", "startCol": 9, "startLine": 1}, {"endCol": 11, "endLine": 1, "image": "(", "startCol": 10, "startLine": 1}, {"endCol": 12, "endLine": 1, "image": ")", "startCol": 11, "startLine": 1}, {"endCol": 13, "endLine": 1, "image": "{", "startCol": 12, "startLine": 1}, {"endCol": 14, "endLine": 1, "image": "}", "startCol": 13, "startLine": 1}], "executableLines": [], "filepath": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts", "functions": 1, "highlights": [{"endCol": 8, "endLine": 1, "startCol": 0, "startLine": 1, "textType": "keyword"}], "issues": [{"endPosition": {"character": 14, "line": 0, "position": 14}, "failure": "block is empty", "fix": undefined, "name": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts", "ruleName": "no-empty", "ruleSeverity": "ERROR", "startPosition": {"character": 12, "line": 0, "position": 12}}], "ncloc": [1], "nosonarLines": [], "statements": 0}]
+12 error     Received:
+12 error       [{"classes": 0, "commentLines": [], "cpdTokens": [{"endCol": 8, "endLine": 1, "image": "function", "startCol": 0, "startLine": 1}, {"endCol": 10, "endLine": 1, "image": "x", "startCol": 9, "startLine": 1}, {"endCol": 11, "endLine": 1, "image": "(", "startCol": 10, "startLine": 1}, {"endCol": 12, "endLine": 1, "image": ")", "startCol": 11, "startLine": 1}, {"endCol": 13, "endLine": 1, "image": "{", "startCol": 12, "startLine": 1}, {"endCol": 14, "endLine": 1, "image": "}", "startCol": 13, "startLine": 1}], "executableLines": [], "filepath": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts", "functions": 1, "highlights": [{"endCol": 8, "endLine": 1, "startCol": 0, "startLine": 1, "textType": "keyword"}], "issues": [], "ncloc": [1], "nosonarLines": [], "statements": 0}]
+12 error
+12 error     Difference:
+12 error
+12 error     - Expected
+12 error     + Received
+12 error
+12 error     @@ -56,29 +56,11 @@
+12 error               "startCol": 0,
+12 error               "startLine": 1,
+12 error               "textType": "keyword",
+12 error             },
+12 error           ],
+12 error     -     "issues": Array [
+12 error     -       Object {
+12 error     -         "endPosition": Object {
+12 error     -           "character": 14,
+12 error     -           "line": 0,
+12 error     -           "position": 14,
+12 error     -         },
+12 error     -         "failure": "block is empty",
+12 error     -         "fix": undefined,
+12 error     -         "name": "/Users/stas/projects/SonarTS/packages/tslint-sonarts/tests/runner/fixtures/runner_project/sample.lint.ts",
+12 error     -         "ruleName": "no-empty",
+12 error     -         "ruleSeverity": "ERROR",
+12 error     -         "startPosition": Object {
+12 error     -           "character": 12,
+12 error     -           "line": 0,
+12 error     -           "position": 12,
+12 error     -         },
+12 error     -       },
+12 error     -     ],
+12 error     +     "issues": Array [],
+12 error           "ncloc": Array [
+12 error             1,
+12 error           ],
+12 error           "nosonarLines": Array [],
+12 error           "statements": 0,
+12 error
+12 error       at Object.<anonymous>.it (tests/runner/tsrunner.test.ts:29:18)
+12 error           at Promise (<anonymous>)
+12 error           at <anonymous>
+12 error       at process._tickCallback (internal/process/next_tick.js:188:7)
+12 error
+12 error
+12 error Test Suites: 2 failed, 35 passed, 37 total
+12 error Tests:       2 failed, 125 passed, 127 total
+12 error Snapshots:   148 passed, 148 total
+12 error Time:        13.805s
+12 error Ran all test suites.
+12 error npm ERR! code ELIFECYCLE
+12 error npm ERR! errno 1
+12 error npm ERR! tslint-sonarts@1.1.1 test: `jest --forceExit`
+12 error npm ERR! Exit status 1
+12 error npm ERR!
+12 error npm ERR! Failed at the tslint-sonarts@1.1.1 test script.
+12 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+12 error
+12 error npm ERR! A complete log of this run can be found in:
+12 error npm ERR!     /Users/stas/.npm/_logs/2017-11-10T19_55_55_291Z-debug.log
+12 error
+12 error > tslint-sonarts@1.1.1 test /Users/stas/projects/SonarTS/packages/tslint-sonarts
+12 error > jest --forceExit
+12 error
+12 error
+12 error     at Promise.all.then.arr (/Users/stas/.config/yarn/global/node_modules/lerna/node_modules/execa/index.js:236:11)
+12 error     at <anonymous>
