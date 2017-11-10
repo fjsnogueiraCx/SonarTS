@@ -9,7 +9,7 @@
   "scripts": {
     "watch-cfg-viewer": "node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "clear": "rm -rf lib/*",
-    "prepack": "yarn build && cp ../README.md .",
+    "prepack": "yarn build && cp ../../README.md .",
     "postpack": "rm README.md",
     "build": "yarn clear && yarn && tsc -p . && yarn build-cfg && webpack",
     "build-cfg": "cp src/tools/cfg_viewer/index.html lib/tools/cfg_viewer/",
