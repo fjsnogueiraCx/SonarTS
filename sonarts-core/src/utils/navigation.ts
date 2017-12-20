@@ -136,6 +136,14 @@ function isToken(node: ts.Node): boolean {
   return node.kind <= ts.SyntaxKind.OfKeyword;
 }
 
+export function isIntersectionTypeNode(node: ts.Node): node is ts.IntersectionTypeNode {
+  return node.kind === ts.SyntaxKind.IntersectionType;
+}
+
+export function isInterfaceDeclaration(node: ts.Node): node is ts.InterfaceDeclaration {
+  return node.kind === ts.SyntaxKind.InterfaceDeclaration;
+}
+
 export function localAncestorsChain(node: ts.Node): ts.Node[] {
   return ancestorsChain(node, ...FUNCTION_LIKE);
 }
@@ -247,3 +255,15 @@ export const COMPOUND_ASSIGNMENTS = [
 ];
 
 export const ACCESS_MODIFIERS = [Kind.PublicKeyword, Kind.PrivateKeyword, Kind.ProtectedKeyword];
+
+export function isNullType(type: ts.Type) {
+  return Boolean(type.flags & ts.TypeFlags.Null);
+}
+
+export function isUndefinedType(type: ts.Type) {
+  return Boolean(type.flags & ts.TypeFlags.Undefined);
+}
+
+export function isVoidType(type: ts.Type) {
+  return Boolean(type.flags & ts.TypeFlags.Void);
+}
